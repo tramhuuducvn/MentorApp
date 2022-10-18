@@ -1,15 +1,7 @@
 import React from 'react';
+import {SafeAreaView, StyleSheet, Text, useColorScheme} from 'react-native';
 
-import {
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  useColorScheme,
-} from 'react-native';
-
-import {
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -20,7 +12,7 @@ const App = () => {
 
   return (
     <SafeAreaView style={[backgroundStyle, styles.container]}>
-      <Text>Mentor App </Text>
+      <Text>Mentor App</Text>
     </SafeAreaView>
   );
 };
@@ -30,8 +22,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
-    flex: 1
-  }
+    flex: 1,
+  },
 });
 
 export default App;
