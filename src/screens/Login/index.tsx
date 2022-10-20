@@ -1,10 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function Chat() {
+const Login = () => {
   return (
     <View>
-      <Text>Chat Screen</Text>
+      <Text>Login</Text>
     </View>
   )
 }
+
+export default Login;

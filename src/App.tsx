@@ -1,24 +1,27 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, Text, useColorScheme} from 'react-native';
-
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {SafeAreaView, StatusBar, StyleSheet, Text, useColorScheme} from 'react-native';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
 
   return (
-    <SafeAreaView style={[backgroundStyle, styles.container]}>
-      <Text>Mentor App</Text>
+    <SafeAreaView style={styles.root}>
+      <StatusBar
+        animated={true}
+        backgroundColor={isDarkMode ? "#000" : "#fff"}
+        showHideTransition={"fade"}
+        barStyle={isDarkMode ? "light-content" : "dark-content"}
+        hidden={false}
+        
+      />
+      <Text>Hello</Text>
     </SafeAreaView>
-  );
+  )
 };
 
 const styles = StyleSheet.create({
-  container: {
+  root: {
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
