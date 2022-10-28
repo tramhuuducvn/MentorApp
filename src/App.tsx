@@ -1,5 +1,6 @@
 import React from 'react';
 import {SafeAreaView, StatusBar, StyleSheet, Text, useColorScheme} from 'react-native';
+import SkeletonCustom from './common/Skeleton';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -13,9 +14,8 @@ const App = () => {
         showHideTransition={"fade"}
         barStyle={isDarkMode ? "light-content" : "dark-content"}
         hidden={false}
-        
       />
-      <Text>Hello</Text>
+      <SkeletonCustom />
     </SafeAreaView>
   )
 };
