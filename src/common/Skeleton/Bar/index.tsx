@@ -15,7 +15,6 @@ const Bar = ({_height = height, _width = width}: Props) => {
         <View style={{width: 100, height: _height, backgroundColor: '#f00'}}></View>
         <SkeletonView
             height={_height}
-            width={_width}
         />
     </View>
   )
