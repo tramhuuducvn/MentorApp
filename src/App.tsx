@@ -1,10 +1,9 @@
 import React from 'react';
-import {SafeAreaView, StatusBar, StyleSheet, Text, useColorScheme} from 'react-native';
+import {SafeAreaView, StatusBar, StyleSheet, useColorScheme} from 'react-native';
 import SkeletonCustom from './common/Skeleton';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
-
 
   return (
     <SafeAreaView style={styles.root}>

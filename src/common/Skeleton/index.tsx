@@ -1,14 +1,19 @@
 import React from 'react';
-import {SkeletonView, ListItem, Text, View} from 'react-native-ui-lib';
-import * as AvatarSkeleton from './Avatar';
-import { Bar } from './Bar';
-import { Content } from './Content';
-
+import {View} from 'react-native-ui-lib';
+import Separate from '../Separate';
+import DepartmentScreenSkeleton from './DeparmentScreenSkeleton';
+import DetailContent from './DetailContent';
+import Profile from './Profile';
+import ProfileDepartment from './ProfileDepartment';
 
 const SkeletonCustom = () => {
   return (
     <View>
-        <Content />
+        {/* <Profile /> */}
+        {/* <DetailContent /> */}
+        {/* <ProfileDepartment /> */}
+        <DepartmentScreenSkeleton />
+        {/* <Separate /> */}
     </View>
   )
 }

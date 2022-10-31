@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dimensions, View } from 'react-native';
+import { View } from 'react-native';
 import { SkeletonView } from 'react-native-ui-lib';
 
 interface Props {
@@ -7,14 +7,14 @@ interface Props {
     _width?: number,
 }
 
-const {width, height} = Dimensions.get('window');
-
-const Bar = ({_height = height, _width = width}: Props) => {
+const Bar = ({_height = 10, _width = undefined}: Props) => {
   return (
-    <View style={{flexDirection: 'row'}}>
-        <View style={{width: 100, height: _height, backgroundColor: '#f00'}}></View>
+    <View>
         <SkeletonView
             height={_height}
+            width={_width}
+            circle
+            colors={['#fff', '#F3F3F3']}
         />
     </View>
   )
